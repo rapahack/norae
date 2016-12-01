@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% block titulo %}blog{% endblock %}
+{% block contenido %}
+
+<br>
+<br>
+<br>
+<div class="container">
+
+	<center>
+
+	{% if articulo_list.count = 0 %}
+				<div class="hservice"><h4 class= "service-heading">
+                  Sin artículos en esta categoría aún                
+             </h4></div>
+    {% endif %}
+
+<div class= "row">
+
+
+    <!--Section: Blog v.1-->
+    <section class="section extra-margins">
+
+        <!--Section heading-->
+        <h1 class="section-heading">{{ categoria.categoria }}</h1>
+        <!--Section sescription-->
+        <p class="section-description">Guarda los buenos recuerdos para los malos momentos y escucha... Apuntate a la vida, a decir lo que sientes, a sentir lo que vales, a soñar lo que quieres y a saber que te sobra con tener lo que tiene...</p>
+            
+        {% for articulo in articulos %}
+        <!--First row-->
+        <div class="row">
+            <div class="col-md-5 m-b-r">
+                <div class="view overlay hm-white-slight">
+                    <img src="/media/{{ articulo.imagen }}" alt="Imagen de {{ articulo.imagen }}" /> 
+                    <a>
+                        <div class="mask"></div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-7 m-b-r">
+                <a href="" class="amber-text"><h5><i class="fa fa-diamond"></i>{{ articulo.titulo }}</h5></a>
+                <p>{{ articulo.descripcion }}</p>
+                <p><span>Publicado el:</span>{{ articulo.fecha }}</p>
+                <a class="btn btn-cyan">Leer mas...</a>
+            </div>
+        </div>
+
+        <hr>
+        {% endfor %}
+    </section>
+   
+
+
+</div>
+
+</center>
+
+<center>
+<div class="pagination">
+    <span class="step-links">
+        {% if articulos.has_previous %}
+            <a class="btn btn-primary" role="button" href="?page={{ articulos.previous_page_number }}"> {{articulos.previous_page_number}} </a>
+
+            <a class="btn btn-info" role="button" href="?page={{ articulos.number }}">{{articulos.number}} </a>
+        {% endif %}
+
+       <!-- <span class="current">
+            (Página {{ articulos.number }} de {{ articulos.paginator.num_pages }})
+        </span>-->
+
+        {% if articulos.has_next %}
+        <a class="btn btn-info" role="button" href="?page={{ articulos.number }}">{{articulos.number}} </a>
+
+           <a class="btn btn-primary"  href="?page={{ articulos.next_page_number }}">{{articulos.next_page_number}} </a>
+        {% endif %}
+
+    </span>
+</div>
+</center>
+{% endblock %}
+

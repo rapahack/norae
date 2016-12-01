@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block titulo %}Blog{% endblock %}
+{% load staticfiles %}
+
+{% block contenido %}
+<br>
+  
+
+<!--Section: Blog v.2-->
+<section class="section extra-margins text-xs-center">
+
+    <!--Section heading-->
+    <h1 class="section-heading">HISTORIAS UNICAS</h1>
+    <!--Section sescription-->
+    <p class="section-description">Detras de una fotografía se esconden momentos y recuerdos 
+    que nunca se olvidan... y nos hacen pensar que la vida va mas alla de lo que observamos </p>
+
+<div class="container">
+        
+
+    <!--First row-->
+    <div class="row">
+         {% for categoria in categorias %}	
+        <!--First column-->
+        <div class="col-lg-4 col-md-12 m-b-r">
+            <!--Featured image-->
+            <div class="view overlay hm-white-slight m-b-2">
+                <img  src="/media/{{ categoria.imagen }}" alt="Imagen de {{ categoria.imagen }}"/>	 
+                <a>
+                    <div class="mask"></div>
+                </a>
+            </div>
+
+            <!--Excerpt-->
+            <a href="" class="cyan-text"><h5><i class="fa fa-map "></i>{{ categoria.categoria }}</h5></a>
+            <p>{{ categoria.descripcion }}</p>
+            <a href="/articulos/categoria/{{ categoria.id }}" class="btn btn-mdb">Leer Mas</a>
+        </div>
+       
+          {% endfor %}
+    </div>
+   
+     
+          
+</div>
+</section>
+
+
+  
+
+      
+          
+{% endblock %}
+

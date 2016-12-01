@@ -1,0 +1,191 @@
+{% extends 'base.html' %}
+
+{% block titulo %}NoraE{% endblock %}
+{% load staticfiles %}
+
+{% block contenido %}
+    <div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
+    <!--Indicators-->
+    <ol class="carousel-indicators">
+        <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-2" data-slide-to="1"></li>
+        <li data-target="#carousel-example-2" data-slide-to="2"></li>
+    </ol>
+    <!--/.Indicators-->
+
+    <!--Slides-->
+    <div class="carousel-inner" role="listbox">
+        <!--First slide-->
+        <div class="carousel-item active">
+            <!--Mask color-->
+            <div class="view hm-black-light">
+            <img src="{% static 'img/slider1.jpg' %}" class="img-fluid" alt="">
+                <div class="full-bg-img">
+                </div>
+            </div>
+            <!--Caption-->
+            <div class="carousel-caption">
+                <div class="animated fadeInDown">
+                    <h3 class="h3-responsive">Servicios Profesionales de Fotografía</h3>
+                    <p class="p">NORA YALENNY ESPINAL SOTO</p>
+                </div>
+            </div>
+            <!--Caption-->
+        </div>
+        <!--/First slide-->
+
+        <!--Second slide-->
+        <div class="carousel-item">
+            <!--Mask color-->
+            <div class="view hm-black-strong">
+                <img src="{% static 'img/slider2.jpg' %}" class="img-fluid" alt="">
+                <div class="full-bg-img">
+                </div>
+            </div>
+            <!--Caption-->
+            <div class="carousel-caption">
+                <div class="animated bounceInLeft">
+                    <h3 class="h3-responsive">Fotografía de Retrato, Eventos de todo tipo, Maternidad, Pre-bodas y Sesiones de Pareja</h3>
+                  
+                </div>
+            </div>
+            <!--Caption-->
+        </div>
+        <!--/Second slide-->
+
+        <!--Third slide-->
+        <div class="carousel-item">
+            <!--Mask color-->
+            <div class="view hm-black-slight">
+                <img src="{% static 'img/slider33.jpg' %}" class="img-fluid" alt="">
+                <div class="full-bg-img">
+                </div>
+            </div>
+            <!--Caption-->
+            <div class="carousel-caption">
+                <div class="animated fadeInDown">
+                    <h3 class="h3-responsive">Amo la fotografía fresca, el movimiento y la naturaleza. Me encanta poder capturar esos instantes de la vida que no vuelven</h3>
+                    <p>Pero se quedan en una fotografía.</p>
+                </div>
+            </div>
+            <!--Caption-->
+        </div>
+        <!--/Third slide-->
+        </div>
+        <!--/.Slides-->
+
+        <!--Controls-->
+        <a class="left carousel-control" href="#carousel-example-2" role="button" data-slide="prev">
+            <span class="icon-prev" aria-hidden="true"></span>
+            <span class="sr-only">Siguiente</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-2" role="button" data-slide="next">
+            <span class="icon-next" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <!--/.Controls-->
+    </div>
+    <div id="fh5co-media-section">  
+        <div class="container"> 
+
+
+        <!--Section: Features v.4-->
+        <section class="section feature-box">
+
+
+            <div class="row animate-box">
+
+                    <h1 class="section-heading col-md-offset-5 ">Sobre Mi</h1>
+
+                <p class="section-description lead ">Fotógrafa y Diseñadora Gráfica freelance localizada en Honduras. Su estilo de fotografía se enfoca en el uso de la luz natural y dedicación en detalles, colores y su caracterizada espontaneidad.</p>
+             </div>
+            <!--First row-->
+            <div class="row features-small">
+
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="col-xs-2">
+                            <i class="fa fa-mortar-board  indigo-text"></i>
+                        </div>
+                        <div class="col-xs-10">
+                            <h4 class="feature-title">Estudios</h4>
+                            <p class="grey-text">Licenciatura en diseño grafíco, experto en generar conceptos creativos, diseñar y ejecutar estrategias de información visual y soluciones de comunicación. </p>
+                            <div style="height:30px"></div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+                <!--/First column-->
+
+
+                <div class="col-md-4 m-b-r center-on-small-only">
+                    <img src="{% static 'img/perfil.jpg' %}" class="animated bounce"  alt="">
+                </div>
+
+
+                <div class="col-md-4">
+
+                    <div class="row">
+                        <div class="col-xs-2">
+                            <i class="fa fa-heart red-text"></i>
+                        </div>
+                        <div class="col-xs-10">
+                            <h4 class="feature-title">Amor Y Pación</h4>
+                            <p class="grey-text">Trato de apoyar el arte y la cultura en toda su extensión.
+                                Tengo una visión de cambiar la manera de hacer fotografía, Espero disfrute de mi historia y mis fotografías.  </p>
+                            <div style="height:30px"></div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div>
+            </section>
+    </div>
+    </div>
+    <hr>
+    <br>
+    <div class="container">
+         <div class="row animate-box">
+
+                    <h1 class="section-heading col-md-offset-5 ">PORTAFOLIO</h1>
+
+                <p class="section-description lead ">Espero disfrute de mi historia y mis fotografías.</p>
+             </div>
+    </div>
+      
+    
+<div class="card-group">
+    <div class="card">
+        <img class="img-fluid" src="{% static 'img/p1.jpg' %}" alt="Card image cap">
+        <div class="card-block">
+            <h4 class="card-title">Bodas</h4>
+            <p class="card-text">El amor puro no pide otra cosa que paz para el otro, porque sabe que sólo de ésa manera podemos estar en paz con nosotros mismos.</p>
+        
+        </div>
+    </div>
+    <div class="card">
+        <img class="img-fluid" src="{% static 'img/p2.jpg' %}" alt="Card image cap">
+        <div class="card-block">
+            <h4 class="card-title">Graduaciones</h4>
+            <p class="card-text">En la vida real te gradúas todos los días. La graduación es un proceso que continúa hasta el último día de tu vida. Si puedes entender eso, marcarás una diferencia.-Arie Pencovici.</p>
+           
+        </div>
+    </div>
+    <div class="card">
+        <img class="img-fluid" src="{% static 'img/p3.jpg' %}" alt="Card image cap">
+        <div class="card-block">
+            <h4 class="card-title">Recuerdos Para Siempre</h4>
+            <p class="card-text">"Inundaste de luz mi vida con sólo mirarme a los ojos, minutos después de nacer. Llenaste mi casa con tu risa de niña. Alegras mi crepúsculo con una simple llamada. Gracias por compartir conmigo tu mundo." Carola Gowland</p>
+        </div>
+    </div>
+</div>
+
+    
+
+
+{% endblock %}
